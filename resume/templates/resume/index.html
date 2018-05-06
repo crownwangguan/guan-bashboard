@@ -28,8 +28,8 @@
 
                 <ul class="list-unstyled components">
                     <li>
-                        <a href="#">Home</a>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                        <a href="#"><span class="glyphicon glyphicon-cloud" aria-hidden="true"></span> Home</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Blog</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li><a href="#">Page 1</a></li>
                             <li><a href="#">Page 2</a></li>
@@ -37,25 +37,21 @@
                         </ul>
                     </li>
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">About</a>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> About</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             {% for link in menu %}
                                 <li><a id="{{ link }}" class="menu_link" href="http://{{ request.get_host }}/{{ link }}">{{ link }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
-
                     <li>
-                        <a href="#">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
+                        <a href="#"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> Contact</a>
                     </li>
                 </ul>
 
                 <ul class="list-unstyled CTAs">
-                    <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a></li>
-                    <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a></li>
+                    <li><a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download"><span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Download CV</a></li>
+                    <li><a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article"><span class="glyphicon glyphicon-bell" aria-hidden="true"></span> RSS</a></li>
                 </ul>
             </nav>
 
