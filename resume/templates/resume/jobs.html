@@ -1,0 +1,41 @@
+{% extends "index.html" %}
+
+{% block content %}
+    {% for job in jobs %}
+        <div class="job one" id="content">
+            <h2 class="display-4">{{ job.title }}</h2>
+            <div class="jobDates">{{ job.start }} to {{ job.end }}</div>
+            <div class="points list">
+            <img src={{ MEDIA_URL }}{{ job.image.url }}>
+            <ul class="respist">
+                {% for project in job.project_set.all %}
+                    <h4>{{ project.projectName }}</h4>
+                    <p class="lead">{{ project.desc }}</p>
+                {% endfor %}
+            </ul>
+            </div>
+            <div class="line"></div>
+        </div>
+    {% endfor %}
+
+{#    <div class="jumbotron jumbotron-fluid">#}
+{#        <div class="container">#}
+{#            {% for job in jobs %}#}
+{#                <div class="job one" id="content">#}
+{#                    <h2 class="display-4">{{ job.title }}</h2>#}
+{#                    <div class="jobDates">{{ job.start }} to {{ job.end }}</div>#}
+{#                    <div class="points list">#}
+{#                    <img src={{ MEDIA_URL }}{{ job.image.url }}>#}
+{#                    <ul class="respist">#}
+{#                        {% for project in job.project_set.all %}#}
+{#                            <h4>{{ project.projectName }}</h4>#}
+{#                            <p class="lead">{{ project.desc }}</p>#}
+{#                        {% endfor %}#}
+{#                    </ul>#}
+{#                    </div>#}
+{#                    <div class="line"></div>#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+{% endblock %}
